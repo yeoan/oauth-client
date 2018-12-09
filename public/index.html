@@ -6,7 +6,6 @@
    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <script src="./index.js"></script>
 	 <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="pragma" content="no-cache">
   <meta http-equiv="expires" content="0">
@@ -31,27 +30,52 @@
 			</div>
 			<div class="card-body">
 				<form>
+					<div class="form-group">
+						<input value="authorize" class="btn float-right login_btn" onClick="document.location.href='http://140.118.110.32:50080/oauth/web/authorize?response_type=code&client_id=m10709208&state=programming_homework_2&redirect_uri=http://localhost:3000'">
+					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-book"></i></span>
+							<span class="input-group-text"><i class="fa fa-user-secret" aria-hidden="true"></i></span>
 						</div>
-						<input id="Enter_the_Form_Element_for_Book_ID_field" type="text" class="form-control" placeholder="Book's ID">
+						<input id="Enter_the_Form_Element_for_Secret" type="text" class="form-control" placeholder="Your Secret Token">
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
+						</div>
+						<input id="Enter_the_Form_Element_for_Auth_Code" type="text" class="form-control" placeholder="Your Authorization Code">
 					</div>
 					<div class="form-group">
-						<input id="btnGetBook" type="submit" value="Get single book data" class="btn float-right login_btn">
+						<input id="getAccessToken" value="get access token" class="btn float-right login_btn">
 					</div>
-          <div class="form-group">
-						<input id="btnGetBooks" type="submit" value="Get books data" class="btn float-right login_btn">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
+						</div>
+						<input id="Enter_the_Form_Element_for_Access_Token" type="text" class="form-control" placeholder="Your Access Token">
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fa fa-key" aria-hidden="true"></i></span>
+						</div>
+						<input id="Enter_the_Form_Element_for_Refresh_Token" type="text" class="form-control" placeholder="Your Refresh Token">
+					</div>
+					<div class="form-group">
+						<input id="Refresh" value="refresh token" class="btn float-right login_btn">
+					</div>
+					<div class="form-group">
+						<input id="getData" value="get data" class="btn float-right login_btn">
 					</div>
 				</form>
 			</div>
 			<div class="card-footer">
-				<div class="d-flex justify-content-center links">
-					Send request by using yellow buttons
+				<div id="data" class="d-flex justify-content-center links">
+					data
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 </body>
+<script src="./index.js"></script>
 </html>
